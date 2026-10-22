@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "vkusvill-cart",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Серверная панель корзины ВкусВилл для Codex.",
   "extensions": {
     "com.openai": {

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "vkusvill-cart-cloud": {
+      "type": "streamable-http",
+      "url": "https://vkusvill-cart-review.gpilikin.chatgpt.site/api/mcp"
+    }
+  }
+}

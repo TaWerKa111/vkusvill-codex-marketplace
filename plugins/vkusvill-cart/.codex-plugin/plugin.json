@@ -1,0 +1,15 @@
+{
+  "name": "vkusvill-cart",
+  "version": "0.3.0",
+  "description": "Серверная панель корзины ВкусВилл для Codex.",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Корзина ВкусВилл · Сервер",
+    "shortDescription": "Собрать корзину продуктов",
+    "longDescription": "Поиск продуктов ВкусВилл, изменение количества и создание ссылки на корзину в отдельной панели Codex. Серверная версия без установки Node.js. Публичный каталог; оформление и оплата — на стороне магазина. Независимый проект.",
+    "category": "Productivity",
+    "defaultPrompt": "Открой панель корзины ВкусВилл",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg"
+  }
+}

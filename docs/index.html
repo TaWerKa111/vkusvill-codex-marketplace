@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f2">
+  <meta name="description" content="Корзина — агент продуктовых покупок в Codex. Расскажите, что нужно, и получите подобранные товары ВкусВилла. Попробуйте интерактивное демо.">
+  <meta property="og:title" content="Корзина — вы говорите, она собирается">
+  <meta property="og:description" content="От одной фразы до списка продуктов. Посмотрите, как работает агент покупок в Codex.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <title>Корзина — покупки начинаются с разговора</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./demo.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержимому</a>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="i-basket" viewBox="0 0 24 24"><path d="m8 4-4 7m12-7 4 7M3 11h18l-2 9H5l-2-9Zm6 4v2m6-2v2"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 1-8 8H5l-3 3V11a9 9 0 0 1 18 0ZM7 9h8m-8 4h5"/></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7V5Z"/></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5m10-4a8 8 0 0 0-13-3L4 8m16 8-2 3a8 8 0 0 1-13-3"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 20c-5 1.5-5-2.5-7-3m14 5v-4a3.5 3.5 0 0 0-1-2.7c3.4-.4 7-1.7 7-7.5A5.8 5.8 0 0 0 20.5 4a5.4 5.4 0 0 0-.1-3S19.1.6 16 2.5a13 13 0 0 0-7 0C5.9.6 4.6 1 4.6 1a5.4 5.4 0 0 0-.1 3A5.8 5.8 0 0 0 3 7.8c0 5.8 3.6 7.1 7 7.5A3.5 3.5 0 0 0 9 18v4" transform="translate(1 1) scale(.9)"/></symbol>
+      <symbol id="p-milk" viewBox="0 0 48 48"><path fill="#f9faf4" stroke="#567661" stroke-width="1.5" d="M16 8h16l4 9v25H12V17l4-9Z"/><path fill="#a9c49d" d="M16 8h16l-3-5H19l-3 5Zm-3 18h22v11H13z"/><path fill="none" stroke="#567661" stroke-width="1.5" d="M16 8l4 9h16m-16 0v25"/><path fill="#567661" d="M25 29h6v5h-6z"/></symbol>
+      <symbol id="p-eggs" viewBox="0 0 48 48"><path fill="#d4c2a4" d="m5 24 4 17h30l4-17H5Z"/><path fill="#ece1c9" stroke="#a28f6a" stroke-width="1.2" d="M4 23h40v7H4z"/><g fill="#fcf5e3" stroke="#b5a48b" stroke-width="1"><path d="M9 23C5 8 20 7 17 23Zm13 0c-4-15 11-16 8 0Zm13 0c-4-15 11-16 8 0Z"/></g><path stroke="#a28f6a" d="M10 34h28"/></symbol>
+      <symbol id="p-banana" viewBox="0 0 48 48"><path fill="#eac656" stroke="#b29137" stroke-width="1.3" d="M9 9c-2 16 9 27 28 25l4-4c-17 4-24-5-25-20L9 9Z"/><path fill="#f4d976" stroke="#b29137" stroke-width="1.3" d="M8 12c-5 18 7 29 27 27l4-5C20 37 12 26 13 12H8Z"/><path fill="#756b39" d="m8 7 8 2-1 5-7-2Zm29 25 5-3 1 3-4 5Z"/></symbol>
+      <symbol id="p-curd" viewBox="0 0 48 48"><path fill="#f7f5e9" stroke="#829176" stroke-width="1.3" d="m7 15 5 27h24l5-27H7Z"/><path fill="#a6b995" d="M8 19h32l-2 12H10z"/><ellipse cx="24" cy="14" rx="18" ry="5" fill="#dce4cf" stroke="#829176" stroke-width="1.3"/><path fill="#637852" d="M20 22h8v6h-8z"/></symbol>
+      <symbol id="p-oats" viewBox="0 0 48 48"><path fill="#e7d9bd" stroke="#a18b63" stroke-width="1.3" d="m13 5 22 2 3 35H10l3-37Z"/><path fill="#f9f3e4" d="M12 18h24v16H12z"/><g stroke="#a18b63" stroke-width="1.5" fill="none"><path d="m20 31 8-13m-4 7-6-2m8-1 5 1m-9 5-5-1"/></g></symbol>
+      <symbol id="p-apple" viewBox="0 0 48 48"><path fill="#bdc88a" stroke="#82935a" stroke-width="1.3" d="M24 13C7 3 4 26 14 39c4 5 7 2 10 2s7 3 11-3c11-17 5-33-11-25Z"/><path fill="#7b9660" d="M25 12c0-10 7-11 12-9-1 7-5 10-12 9Z"/><path stroke="#716746" stroke-width="2" d="m24 14-2-9"/></symbol>
+      <symbol id="p-sugar" viewBox="0 0 48 48"><path fill="#efeee4" stroke="#a09f87" stroke-width="1.3" d="m13 6 22 1 3 35H10l3-36Z"/><path fill="#b3c7c7" d="M12 18h24l1 15H11z"/><path fill="#f9faf2" stroke="#7c9693" d="m19 24 6-3 6 3-6 4-6-4Zm0 0v6l6 4 6-4v-6m-6 4v6"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="header wrap">
+    <a class="brand" href="#" aria-label="Корзина — на главную"><span class="brand-mark"><svg class="icon"><use href="#i-basket"/></svg></span>корзина<span class="brand-period">.</span></a>
+    <nav class="nav" aria-label="Основная навигация"><a href="#how">Как это работает</a><a href="#demo">Демо</a><a href="https://github.com/TaWerKa111/vkusvill-codex-marketplace" class="github-link" aria-label="Исходный код на GitHub"><svg class="icon"><use href="#i-github"/></svg></a></nav>
+    <a class="button button-small button-dark" href="#install">Установить <svg class="icon"><use href="#i-arrow"/></svg></a>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Агент покупок в вашем чате</p>
+        <h1 id="hero-title">Вы говорите.<br>Корзина<br><em>собирается.</em></h1>
+        <p class="hero-description">Молоко на завтра или продукты на неделю.<br class="desktop-break"> Просто скажите, что нужно, — агент подберёт товары ВкусВилла и соберёт корзину.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#demo" id="hero-demo"><svg class="icon"><use href="#i-play"/></svg> Посмотреть в деле</a><a class="text-link" href="#install">Как установить <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-footnote"><span class="mini-mark">C</span><span>Работает в Codex <span class="footnote-divider">/</span> Без локального сервера</span></div>
+      </div>
+
+      <div class="demo-scene" id="demo" aria-label="Интерактивная демонстрация корзины">
+        <div class="scene-caption"><span><span class="status-dot"></span> От запроса до корзины</span><span class="mono">ИНТЕРАКТИВНОЕ ДЕМО</span></div>
+        <div class="demo-window">
+          <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span><svg class="icon"><use href="#i-basket"/></svg> Корзина</span><span class="demo-label">ДЕМО</span></div>
+          <div class="demo-body">
+            <div class="conversation"><div class="panel-label"><svg class="icon"><use href="#i-chat"/></svg> ВАШ ЧАТ</div><div class="user-message" id="demo-prompt">Добавь молоко, 10 яиц и килограмм бананов</div><div class="agent-message"><span class="agent-avatar"><svg class="icon"><use href="#i-spark"/></svg></span><div><strong>Корзина</strong><p id="agent-reply">Всё собрано. Количество можно изменить прямо в корзине.</p></div></div><div class="agent-detail" id="agent-detail"><svg class="icon"><use href="#i-check"/></svg><span>Учёл количество и фасовку</span></div><div class="chat-hint">Вы пишете в чате.<br>Агент берёт подбор на себя.</div></div>
+            <div class="basket-panel"><div class="basket-title"><h2>Ваша корзина</h2><span id="item-count">3 товара</span></div><div id="product-list" class="product-list"></div><div class="basket-bottom"><div class="basket-total"><span>Предварительно</span><strong id="basket-total">431,90 ₽</strong></div><button class="button button-green checkout" id="demo-checkout">Дальше — в магазин <svg class="icon"><use href="#i-arrow"/></svg></button><p class="demo-disclaimer">Примеры товаров и цен. Без оформления заказа.</p></div></div>
+          </div>
+          <div class="demo-timeline" aria-label="Этапы демонстрации"><span data-stage="0" class="is-current"><i>1</i> Запрос</span><span data-stage="1" class="is-current"><i>2</i> Подбор</span><span data-stage="2" class="is-current"><i>3</i> Корзина</span><div class="timeline-track"><div id="timeline-progress"></div></div></div>
+        </div>
+        <div class="demo-controls"><div class="scenario-picker" role="group" aria-label="Сценарий демонстрации"><button data-scenario="essentials" aria-pressed="true">За покупками</button><button data-scenario="breakfast" aria-pressed="false">На завтрак</button><button data-scenario="recipe" aria-pressed="false">Для сырников</button></div><button id="replay-demo" class="replay-button" aria-label="Воспроизвести демонстрацию"><svg class="icon"><use href="#i-refresh"/></svg></button></div>
+        <div class="demo-meta"><span id="demo-status" role="status">Попробуйте другой сценарий или измените количество</span><button class="motion-toggle" id="motion-toggle" aria-pressed="true" aria-label="Анимация включена. Нажмите, чтобы выключить"><span aria-hidden="true" class="motion-toggle-track"></span>Анимация</button></div>
+        <noscript><p class="noscript-note">Для интерактивного демо включите JavaScript. Описание проекта и инструкция доступны ниже.</p></noscript>
+      </div>
+    </section>
+
+    <div class="benefits wrap" aria-label="Возможности проекта"><span><svg class="icon"><use href="#i-chat"/></svg> В привычном чате</span><span><svg class="icon"><use href="#i-basket"/></svg> Товары ВкусВилла</span><span><svg class="icon"><use href="#i-lock"/></svg> Корзина на устройстве</span><span><svg class="icon"><use href="#i-check"/></svg> Покупка в магазине</span></div>
+
+    <section class="how section wrap" id="how" aria-labelledby="how-title">
+      <div class="section-heading"><div><p class="eyebrow">Меньше рутины. Больше жизни.</p><h2 id="how-title">От «что купить»<br>до «всё собрано».</h2></div><p>Не нужно искать каждый продукт отдельно.<br>Один разговор — и список обретает форму.</p></div>
+      <div class="steps-grid">
+        <article class="step-card"><div class="step-visual visual-chat" aria-hidden="true"><span class="sketch-message">На двоих. На три дня.<br>И что-нибудь к чаю.</span><span class="sketch-send"><svg class="icon"><use href="#i-arrow"/></svg></span></div><p class="step-number">01 <span>РАССКАЖИТЕ</span></p><h3>Как человеку.</h3><p>Список, рецепт или планы на неделю. Укажите бюджет и пожелания — своими словами.</p></article>
+        <article class="step-card"><div class="step-visual visual-selection" aria-hidden="true"><span class="selection-item"><svg class="product-art"><use href="#p-milk"/></svg><span>Молоко<small>Подходит по запросу</small></span><svg class="icon"><use href="#i-check"/></svg></span><span class="selection-chip"><svg class="icon"><use href="#i-spark"/></svg> Фасовка учтена</span></div><p class="step-number">02 <span>ДОВЕРЬТЕ ПОДБОР</span></p><h3>Агент найдёт варианты.</h3><p>Подберёт реальные товары из каталога. Уточнит детали, только если они нужны для покупки.</p></article>
+        <article class="step-card"><div class="step-visual visual-done" aria-hidden="true"><span class="done-basket"><svg class="icon"><use href="#i-basket"/></svg><i><svg class="icon"><use href="#i-check"/></svg></i></span><span class="done-caption">Всё на своих местах</span></div><p class="step-number">03 <span>ПРОВЕРЬТЕ И КУПИТЕ</span></p><h3>Последнее слово — ваше.</h3><p>Проверьте продукты и количество. Попросите ссылку и завершите покупку во ВкусВилле.</p></article>
+      </div>
+    </section>
+
+    <section class="preferences-section wrap" aria-labelledby="preferences-title"><div class="preferences-copy"><p class="eyebrow">У каждого своя корзина</p><h2 id="preferences-title">Ваши привычки.<br><em>В каждой покупке.</em></h2><p>На одного или на всю семью. Без лактозы или без рыбы. Расскажите о предпочтениях в чате или сохраните их в панели.</p><a href="#examples" class="text-link">Попробовать свой сценарий <span aria-hidden="true">↗</span></a></div><div class="preference-paper"><div class="paper-top"><span class="paper-icon"><svg class="icon"><use href="#i-basket"/></svg></span><span>Небольшая заметка<br><strong>о вашей семье</strong></span><span class="paper-pin" aria-hidden="true"></span></div><div class="preference-row"><span>Для кого</span><strong>Двое взрослых</strong></div><div class="preference-row"><span>Планируем</span><strong>На три дня</strong></div><div class="preference-row"><span>Бюджет</span><strong>До 3 000 ₽</strong></div><div class="preference-tags"><span>Без лактозы</span><span>Готовим дома</span></div><p><svg class="icon"><use href="#i-check"/></svg> Учитывается при подборе</p></div></section>
+
+    <section class="examples section wrap" id="examples" aria-labelledby="examples-title"><div class="section-heading"><div><p class="eyebrow">Никаких специальных команд</p><h2 id="examples-title">Начните с одной фразы.</h2></div><p>Выберите пример —<br>и посмотрите, что получится.</p></div><div class="examples-grid"><button class="example-card" data-example="essentials"><span class="example-category">НА КАЖДЫЙ ДЕНЬ <svg class="icon"><use href="#i-arrow"/></svg></span><span class="example-quote">«Добавь молоко, 10 яиц и килограмм бананов»</span><span class="example-bottom">Просто пополнить запасы <span>01</span></span></button><button class="example-card" data-example="breakfast"><span class="example-category">С УЧЁТОМ ПРИВЫЧЕК <svg class="icon"><use href="#i-arrow"/></svg></span><span class="example-quote">«Собери завтрак на двоих. Молоко без лактозы»</span><span class="example-bottom">Пожелания уже в запросе <span>02</span></span></button><button class="example-card" data-example="recipe"><span class="example-category">ПОД КОНКРЕТНОЕ БЛЮДО <svg class="icon"><use href="#i-arrow"/></svg></span><span class="example-quote">«Хочу сырники на четверых. Масло и мука есть»</span><span class="example-bottom">Только то, чего не хватает <span>03</span></span></button></div></section>
+
+    <section class="install-section wrap" id="install" aria-labelledby="install-title"><div class="install-intro"><span class="brand-mark"><svg class="icon"><use href="#i-basket"/></svg></span><p class="eyebrow">От демо — к вашей корзине</p><h2 id="install-title">Меньше списков.<br><em>Больше готово.</em></h2><p>Добавьте плагин в Codex.<br>Следующие покупки начнутся с разговора.</p><a class="button button-dark" href="codex://plugins/vkusvill-cart@vkusvill-cloud/app/cart_browse">Открыть в Codex <svg class="icon"><use href="#i-arrow"/></svg></a><span class="install-note">Если плагин уже установлен</span></div><div class="install-guide"><h3>Первая встреча с Корзиной?</h3><ol class="install-steps"><li><span>1</span><div>Откройте <strong>Plugins</strong> в Codex<p>Нажмите Add plugin marketplace.</p></div></li><li><span>2</span><div>Добавьте источник<p>Вставьте адрес ниже. Git ref: <code>main</code>.</p><div class="copy-field"><code id="marketplace-source">TaWerKa111/vkusvill-codex-marketplace</code><button id="copy-source" aria-label="Скопировать адрес каталога"><svg class="icon"><use href="#i-copy"/></svg></button></div><span class="copy-status" id="copy-status" role="status"></span></div></li><li><span>3</span><div>Установите <strong>«Корзина · магазины»</strong><p>Откройте панель и напишите, что купить.</p></div></li></ol><a class="text-link" href="https://github.com/TaWerKa111/vkusvill-codex-marketplace#readme">Инструкция и исходный код <span aria-hidden="true">↗</span></a></div></section>
+
+    <section class="faq section wrap" aria-labelledby="faq-title"><div><p class="eyebrow">Пара деталей</p><h2 id="faq-title">Без сюрпризов.</h2></div><div class="faq-list"><details><summary>Это настоящий заказ?<span aria-hidden="true">+</span></summary><p>На этой странице — интерактивный пример с условными ценами. Плагин в Codex ищет настоящие товары и создаёт ссылку на корзину. Оформление заказа, проверка наличия и оплата происходят в магазине.</p></details><details><summary>Нужно запускать сервер на компьютере?<span aria-hidden="true">+</span></summary><p>Нет. Установите плагин из каталога в Codex. Он подключается к серверу по HTTPS; Node.js и локальный сервер для использования не нужны.</p></details><details><summary>Где сохраняются продукты и предпочтения?<span aria-hidden="true">+</span></summary><p>Корзина и сохранённые в панели предпочтения хранятся локально на вашем устройстве. Между устройствами синхронизации пока нет. Если хранилище недоступно, корзина сохраняется только до закрытия панели.</p></details><details><summary>Цены в корзине окончательные?<span aria-hidden="true">+</span></summary><p>Цены предварительные. Наличие по вашему адресу, персональные скидки, доставку и итоговую сумму проверяйте во ВкусВилле перед оплатой.</p></details></div></section>
+  </main>
+
+  <footer class="footer wrap"><div><a class="brand" href="#"><span class="brand-mark"><svg class="icon"><use href="#i-basket"/></svg></span>корзина<span class="brand-period">.</span></a><p>Освобождаем время для того, что важнее.</p></div><div class="footer-right"><a href="https://github.com/TaWerKa111/vkusvill-codex-marketplace"><svg class="icon"><use href="#i-github"/></svg> Проект на GitHub <span aria-hidden="true">↗</span></a><p>Независимый проект. Не официальный сервис ВкусВилла.</p></div></footer>
+
+  <dialog id="checkout-dialog" aria-labelledby="dialog-title"><button class="dialog-close" id="close-dialog" aria-label="Закрыть">×</button><span class="dialog-icon"><svg class="icon"><use href="#i-check"/></svg></span><p class="eyebrow">Последний шаг — за вами</p><h2 id="dialog-title">Корзина собрана.</h2><p>В настоящем плагине агент создаст ссылку на выбранные товары ВкусВилла. Вы проверите наличие и итоговую цену, затем оформите заказ в магазине.</p><div class="dialog-total"><span>В этом демо</span><strong id="dialog-total"></strong></div><a class="button button-dark" href="#install" id="dialog-install">Установить плагин <svg class="icon"><use href="#i-arrow"/></svg></a><small>Демо не отправляет товары в магазин.</small></dialog>
+</body>
+</html>

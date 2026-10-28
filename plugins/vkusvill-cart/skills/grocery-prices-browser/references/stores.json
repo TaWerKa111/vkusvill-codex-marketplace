@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "documentedPanelStoreCount": 17,
+  "unresolvedPanelStoreCount": 1,
+  "evidence": {
+    "identityAndDomains": "observations.md",
+    "browserHistory": "verification.md",
+    "panelAndConnectedCatalogs": "../../../../../README.md",
+    "basis": "Migrated from repository documentation before registry extraction; identityAndDomains now links back to this registry. No new live store verification."
+  },
+  "stores": [
+    {
+      "id": "5ka",
+      "name": "Пятёрочка",
+      "skill": "../../grocery-pyaterochka/SKILL.md",
+      "officialDomains": [
+        "5ka.ru",
+        "www.5ka.ru"
+      ],
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": true,
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented"
+      },
+      "historicalVerification": {
+        "date": "2026-10-25",
+        "city": "Казань",
+        "outcome": "captcha",
+        "notes": "CAPTCHA до подтверждения города; товары не проверены."
+      }
+    },
+    {
+      "id": "perekrestok",
+      "name": "Перекрёсток",
+      "skill": "../../grocery-perekrestok/SKILL.md",
+      "officialDomains": [
+        "perekrestok.ru",
+        "www.perekrestok.ru"
+      ],
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": true,
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented"
+      },
+      "historicalVerification": {
+        "date": "2026-10-25",
+        "city": "Казань",
+        "outcome": "error",
+        "notes": "Ошибка связи/VPN до подтверждения города; товары не проверены."
+      }
+    },
+    {
+      "id": "chizhik",
+      "name": "Чижик",
+      "skill": "../../grocery-chizhik/SKILL.md",
+      "officialDomains": [
+        "chizhik.club",
+        "www.chizhik.club"
+      ],
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": true,
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented"
+      },
+      "historicalVerification": {
+        "date": "2026-10-25",
+        "city": "Казань",
+        "outcome": "captcha",
+        "notes": "CAPTCHA до подтверждения города; товары не проверены."
+      }
+    },
+    {
+      "id": "magnit",
+      "name": "Магнит",
+      "skill": "../../grocery-magnit/SKILL.md",
+      "officialDomains": [
+        "magnit.ru",
+        "dostavka.magnit.ru"
+      ],
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": true,
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented"
+      },
+      "historicalVerification": {
+        "date": "2026-10-25",
+        "city": "Казань",
+        "outcome": "catalog_read",
+        "notes": "Самовывоз, Казань, Аделя Кутуя 100 к 2; прочитаны пять запросов и отрицательный поиск."
+      }
+    },
+    {
+      "id": "lenta",
+      "name": "Лента",
+      "skill": "../../grocery-lenta/SKILL.md",
+      "officialDomains": [
+        "lenta.com",
+        "www.lenta.com"
+      ],
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": true,
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented"
+      },
+      "historicalVerification": {
+        "date": "2026-10-25",
+        "city": "Казань",
+        "outcome": "catalog_read",
+        "notes": "Самовывоз, Казань, Павлюхина 91; цены по Карте №1 и остатки; карта пользователя не подтверждена."
+      }
+    },
+    {
+      "id": "vv",
+      "name": "ВкусВилл",
+      "skill": "../../grocery-vkusvill/SKILL.md",
+      "officialDomains": [
+        "vkusvill.ru",
+        "www.vkusvill.ru"
+      ],
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": true,
+        "browserObservationImport": true,
+        "connectedCatalog": "public_catalog"
+      },
+      "historicalVerification": {
+        "date": "2026-10-25",
+        "city": "Казань",
+        "outcome": "login_required",
+        "notes": "Выбор способа получения требует телефона; есть требование адреса. Региональные предложения не подтверждены."
+      }
+    },
+    {
+      "id": "svetofor",
+      "name": "Светофор",
+      "skill": "../../grocery-svetofor/SKILL.md",
+      "officialDomains": [
+        "svetofor-rls.ru"
+      ],
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": true,
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented"
+      },
+      "historicalVerification": {
+        "date": "2026-10-25",
+        "city": "Казань",
+        "outcome": "catalog_only",
+        "notes": "Проверенный сайт логистический, без розничных цен; список складов не подтверждает торговую точку."
+      }
+    },
+    {
+      "id": "samokat",
+      "name": "Самокат",
+      "skill": "../../grocery-samokat/SKILL.md",
+      "officialDomains": [
+        "samokat.ru",
+        "www.samokat.ru"
+      ],
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": true,
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented"
+      },
+      "historicalVerification": {
+        "date": "2026-10-25",
+        "city": "Казань",
+        "outcome": "error",
+        "notes": "Не удалось загрузить сайт, упоминание VPN; город и товары не подтверждены."
+      }
+    },
+    {
+      "id": "auchan",
+      "name": "Ашан",
+      "skill": "../../grocery-auchan/SKILL.md",
+      "officialDomains": [
+        "auchan.ru",
+        "www.auchan.ru"
+      ],
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": true,
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented"
+      },
+      "historicalVerification": {
+        "date": "2026-10-25",
+        "city": "Казань",
+        "outcome": "catalog_read",
+        "notes": "Самовывоз, Казань, Победы 91; прочитаны пять категорий, скидки по карте и даты акций."
+      }
+    },
+    {
+      "id": "metro",
+      "name": "METRO",
+      "skill": "../../grocery-metro/SKILL.md",
+      "officialDomains": [
+        "online.metro-cc.ru",
+        "metro-cc.ru",
+        "www.metro-cc.ru"
+      ],
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": true,
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented"
+      },
+      "historicalVerification": {
+        "date": "2026-10-25",
+        "city": "Казань",
+        "outcome": "catalog_read",
+        "notes": "Самовывоз, Казань, Мулланура Вахитова 4; онлайн-цены, минимум заказа, скидки за количество и минимальный вес."
+      }
+    },
+    {
+      "id": "spar-middle-volga",
+      "name": "SPAR Middle Volga",
+      "skill": "../../grocery-spar-middle-volga/SKILL.md",
+      "officialDomains": [
+        "myspar.ru",
+        "www.myspar.ru"
+      ],
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": true,
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented"
+      },
+      "historicalVerification": {
+        "date": "2026-10-25",
+        "city": "Казань",
+        "outcome": "reference_only",
+        "notes": "Подтверждён город Казань и оператор; точка/зона и способ получения не подтверждены."
+      }
+    },
+    {
+      "id": "smart",
+      "name": "Smart",
+      "skill": "../../grocery-smart/SKILL.md",
+      "officialDomains": [
+        "smart.swnn.ru"
+      ],
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": true,
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented"
+      },
+      "historicalVerification": {
+        "date": "2026-10-25",
+        "city": "Казань",
+        "outcome": "reference_only",
+        "notes": "Казань, Оренбургский тракт 158; карточки с ценами, наличие и смысл условия «По карте 5шт» не подтверждены."
+      }
+    }
+  ],
+  "additionalNetworks": [
+    {
+      "name": "Бахетле",
+      "id": null,
+      "officialDomains": [],
+      "supportLevel": "connected_catalog_documented",
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": false,
+        "browserObservationImport": "unverified",
+        "connectedCatalog": "location_scoped_catalog"
+      },
+      "evidence": "../../../../../README.md",
+      "notes": "prices_search: Казань, Павлюхина 57, самовывоз; wire ID и домены импорта не подтверждены в этом репозитории."
+    },
+    {
+      "name": "О’КЕЙ",
+      "id": null,
+      "officialDomains": [],
+      "supportLevel": "list_only",
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": false,
+        "browserObservationImport": "unverified",
+        "connectedCatalog": "not_documented"
+      },
+      "evidence": "../../../../../README.md",
+      "notes": "Документированы списки панели; отдельный браузерный навык, wire ID и домены импорта здесь не подтверждены."
+    },
+    {
+      "name": "Дикси",
+      "id": null,
+      "officialDomains": [],
+      "supportLevel": "list_only",
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": false,
+        "browserObservationImport": "unverified",
+        "connectedCatalog": "not_documented"
+      },
+      "evidence": "../../../../../README.md",
+      "notes": "Документированы списки панели; отдельный браузерный навык, wire ID и домены импорта здесь не подтверждены."
+    },
+    {
+      "name": "Монетка",
+      "id": null,
+      "officialDomains": [],
+      "supportLevel": "list_only",
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": false,
+        "browserObservationImport": "unverified",
+        "connectedCatalog": "not_documented"
+      },
+      "evidence": "../../../../../README.md",
+      "notes": "Документированы списки панели; отдельный браузерный навык, wire ID и домены импорта здесь не подтверждены."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "q": "молоко",
+    "city": "Казань",
+    "products": [
+      {
+        "store": "metro",
+        "id": "fixture-milk-1l",
+        "name": "Учебный пример: молоко 1 л",
+        "price": 109,
+        "url": "https://online.metro-cc.ru/",
+        "quantity": 1,
+        "unit": "л",
+        "scope": "Казань, учебная публичная точка",
+        "condition": "Синтетический пример, не наблюдение. Обычная цена; 103 ₽ от 3 упаковок в расчёт не включены.",
+        "checkedAt": "2026-10-25T12:00:00Z",
+        "availability": "available",
+        "priceType": "regular",
+        "fulfillment": "pickup",
+        "match": "exact",
+        "locationConfirmed": true,
+        "conditionsConfirmed": true,
+        "offerKind": "offer"
+      }
+    ],
+    "checks": []
+  },
+  {
+    "q": "молоко",
+    "city": "Казань",
+    "products": [
+      {
+        "store": "lenta",
+        "id": "fixture-milk-loyalty",
+        "name": "Учебный пример: молоко 900 мл",
+        "price": 89,
+        "url": "https://lenta.com/",
+        "quantity": 0.9,
+        "unit": "л",
+        "scope": "Казань, учебная публичная точка",
+        "condition": "Синтетический пример. Цена по карте; наличие карты у пользователя не подтверждено.",
+        "checkedAt": "2026-10-25T12:00:00Z",
+        "availability": "available",
+        "priceType": "loyalty",
+        "fulfillment": "pickup",
+        "match": "exact",
+        "locationConfirmed": true,
+        "conditionsConfirmed": false,
+        "offerKind": "offer"
+      }
+    ],
+    "checks": []
+  },
+  {
+    "q": "молоко",
+    "city": "Казань",
+    "products": [],
+    "checks": [
+      {
+        "store": "5ka",
+        "scope": "Локация не подтверждена",
+        "fulfillment": "unknown",
+        "checkedAt": "2026-10-25T12:00:00Z",
+        "status": "captcha",
+        "message": "Синтетический пример. CAPTCHA до подтверждения города; поиск не выполнен.",
+        "url": "https://5ka.ru/"
+      }
+    ]
+  },
+  {
+    "q": "яблоки",
+    "city": "Казань",
+    "products": [],
+    "checks": [
+      {
+        "store": "metro",
+        "scope": "Казань, учебная публичная точка",
+        "fulfillment": "pickup",
+        "checkedAt": "2026-10-25T12:00:00Z",
+        "status": "error",
+        "message": "Синтетический пример. Ограничение представления цены при импорте: 139 ₽/кг, минимум 1,5 кг. Минимальные 208,50 ₽ показаны отдельно, не включены в подтверждённый импортированный итог. Это не ошибка сайта магазина.",
+        "url": "https://online.metro-cc.ru/"
+      }
+    ]
+  }
+]

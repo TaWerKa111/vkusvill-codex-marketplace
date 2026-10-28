@@ -1,0 +1,22 @@
+name: Validate repository
+
+on:
+  pull_request:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Validate repository (offline)
+        run: python3 scripts/validate_repository.py
+      - name: Test validator including invalid inputs
+        run: python3 -m unittest discover -s tests -v

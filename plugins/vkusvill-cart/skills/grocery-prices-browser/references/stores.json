@@ -1,12 +1,11 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "documentedPanelStoreCount": 17,
-  "unresolvedPanelStoreCount": 1,
   "evidence": {
     "identityAndDomains": "observations.md",
     "browserHistory": "verification.md",
     "panelAndConnectedCatalogs": "../../../../../README.md",
-    "basis": "Migrated from repository documentation before registry extraction; identityAndDomains now links back to this registry. No new live store verification."
+    "basis": "Canonical descriptive registry reconciled with the current application directory and official-host allowlist on 2026-10-29. No new live store verification; this file does not deploy the server."
   },
   "stores": [
     {
@@ -21,14 +20,17 @@
         "manualLists": true,
         "browserWorkflow": true,
         "browserObservationImport": true,
-        "connectedCatalog": "not_documented"
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
       },
       "historicalVerification": {
         "date": "2026-10-25",
         "city": "Казань",
         "outcome": "captcha",
         "notes": "CAPTCHA до подтверждения города; товары не проверены."
-      }
+      },
+      "url": "https://5ka.ru"
     },
     {
       "id": "perekrestok",
@@ -42,14 +44,17 @@
         "manualLists": true,
         "browserWorkflow": true,
         "browserObservationImport": true,
-        "connectedCatalog": "not_documented"
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
       },
       "historicalVerification": {
         "date": "2026-10-25",
         "city": "Казань",
         "outcome": "error",
         "notes": "Ошибка связи/VPN до подтверждения города; товары не проверены."
-      }
+      },
+      "url": "https://www.perekrestok.ru"
     },
     {
       "id": "chizhik",
@@ -63,14 +68,17 @@
         "manualLists": true,
         "browserWorkflow": true,
         "browserObservationImport": true,
-        "connectedCatalog": "not_documented"
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
       },
       "historicalVerification": {
         "date": "2026-10-25",
         "city": "Казань",
         "outcome": "captcha",
         "notes": "CAPTCHA до подтверждения города; товары не проверены."
-      }
+      },
+      "url": "https://chizhik.club"
     },
     {
       "id": "magnit",
@@ -84,14 +92,17 @@
         "manualLists": true,
         "browserWorkflow": true,
         "browserObservationImport": true,
-        "connectedCatalog": "not_documented"
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
       },
       "historicalVerification": {
         "date": "2026-10-25",
         "city": "Казань",
         "outcome": "catalog_read",
         "notes": "Самовывоз, Казань, Аделя Кутуя 100 к 2; прочитаны пять запросов и отрицательный поиск."
-      }
+      },
+      "url": "https://magnit.ru"
     },
     {
       "id": "lenta",
@@ -105,14 +116,17 @@
         "manualLists": true,
         "browserWorkflow": true,
         "browserObservationImport": true,
-        "connectedCatalog": "not_documented"
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
       },
       "historicalVerification": {
         "date": "2026-10-25",
         "city": "Казань",
         "outcome": "catalog_read",
         "notes": "Самовывоз, Казань, Павлюхина 91; цены по Карте №1 и остатки; карта пользователя не подтверждена."
-      }
+      },
+      "url": "https://lenta.com/landings/dostavka"
     },
     {
       "id": "vv",
@@ -126,14 +140,17 @@
         "manualLists": true,
         "browserWorkflow": true,
         "browserObservationImport": true,
-        "connectedCatalog": "public_catalog"
+        "connectedCatalog": "public_catalog",
+        "realCartLink": true,
+        "verifiedTransfer": true
       },
       "historicalVerification": {
         "date": "2026-10-25",
         "city": "Казань",
         "outcome": "login_required",
         "notes": "Выбор способа получения требует телефона; есть требование адреса. Региональные предложения не подтверждены."
-      }
+      },
+      "url": "https://vkusvill.ru"
     },
     {
       "id": "svetofor",
@@ -146,14 +163,17 @@
         "manualLists": true,
         "browserWorkflow": true,
         "browserObservationImport": true,
-        "connectedCatalog": "not_documented"
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
       },
       "historicalVerification": {
         "date": "2026-10-25",
         "city": "Казань",
         "outcome": "catalog_only",
         "notes": "Проверенный сайт логистический, без розничных цен; список складов не подтверждает торговую точку."
-      }
+      },
+      "url": "https://svetofor-rls.ru"
     },
     {
       "id": "samokat",
@@ -167,18 +187,21 @@
         "manualLists": true,
         "browserWorkflow": true,
         "browserObservationImport": true,
-        "connectedCatalog": "not_documented"
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
       },
       "historicalVerification": {
         "date": "2026-10-25",
         "city": "Казань",
         "outcome": "error",
         "notes": "Не удалось загрузить сайт, упоминание VPN; город и товары не подтверждены."
-      }
+      },
+      "url": "https://samokat.ru"
     },
     {
       "id": "auchan",
-      "name": "Ашан",
+      "name": "АШАН",
       "skill": "../../grocery-auchan/SKILL.md",
       "officialDomains": [
         "auchan.ru",
@@ -188,14 +211,17 @@
         "manualLists": true,
         "browserWorkflow": true,
         "browserObservationImport": true,
-        "connectedCatalog": "not_documented"
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
       },
       "historicalVerification": {
         "date": "2026-10-25",
         "city": "Казань",
         "outcome": "catalog_read",
         "notes": "Самовывоз, Казань, Победы 91; прочитаны пять категорий, скидки по карте и даты акций."
-      }
+      },
+      "url": "https://www.auchan.ru"
     },
     {
       "id": "metro",
@@ -210,14 +236,17 @@
         "manualLists": true,
         "browserWorkflow": true,
         "browserObservationImport": true,
-        "connectedCatalog": "not_documented"
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
       },
       "historicalVerification": {
         "date": "2026-10-25",
         "city": "Казань",
         "outcome": "catalog_read",
         "notes": "Самовывоз, Казань, Мулланура Вахитова 4; онлайн-цены, минимум заказа, скидки за количество и минимальный вес."
-      }
+      },
+      "url": "https://online.metro-cc.ru"
     },
     {
       "id": "spar-middle-volga",
@@ -231,14 +260,17 @@
         "manualLists": true,
         "browserWorkflow": true,
         "browserObservationImport": true,
-        "connectedCatalog": "not_documented"
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
       },
       "historicalVerification": {
         "date": "2026-10-25",
         "city": "Казань",
         "outcome": "reference_only",
         "notes": "Подтверждён город Казань и оператор; точка/зона и способ получения не подтверждены."
-      }
+      },
+      "url": "https://myspar.ru"
     },
     {
       "id": "smart",
@@ -251,72 +283,107 @@
         "manualLists": true,
         "browserWorkflow": true,
         "browserObservationImport": true,
-        "connectedCatalog": "not_documented"
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
       },
       "historicalVerification": {
         "date": "2026-10-25",
         "city": "Казань",
         "outcome": "reference_only",
         "notes": "Казань, Оренбургский тракт 158; карточки с ценами, наличие и смысл условия «По карте 5шт» не подтверждены."
+      },
+      "url": "https://smart.swnn.ru"
+    },
+    {
+      "id": "lavka",
+      "name": "Яндекс Лавка",
+      "url": "https://lavka.yandex.ru",
+      "skill": null,
+      "officialDomains": [
+        "lavka.yandex.ru"
+      ],
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": false,
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
       }
-    }
-  ],
-  "additionalNetworks": [
-    {
-      "name": "Бахетле",
-      "id": null,
-      "officialDomains": [],
-      "supportLevel": "connected_catalog_documented",
-      "capabilities": {
-        "manualLists": true,
-        "browserWorkflow": false,
-        "browserObservationImport": "unverified",
-        "connectedCatalog": "location_scoped_catalog"
-      },
-      "evidence": "../../../../../README.md",
-      "notes": "prices_search: Казань, Павлюхина 57, самовывоз; wire ID и домены импорта не подтверждены в этом репозитории."
     },
     {
+      "id": "okey",
       "name": "О’КЕЙ",
-      "id": null,
-      "officialDomains": [],
-      "supportLevel": "list_only",
+      "url": "https://www.okeydostavka.ru",
+      "skill": null,
+      "officialDomains": [
+        "okeydostavka.ru",
+        "www.okeydostavka.ru",
+        "okmarket.ru",
+        "www.okmarket.ru"
+      ],
       "capabilities": {
         "manualLists": true,
         "browserWorkflow": false,
-        "browserObservationImport": "unverified",
-        "connectedCatalog": "not_documented"
-      },
-      "evidence": "../../../../../README.md",
-      "notes": "Документированы списки панели; отдельный браузерный навык, wire ID и домены импорта здесь не подтверждены."
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
+      }
     },
     {
+      "id": "dixy",
       "name": "Дикси",
-      "id": null,
-      "officialDomains": [],
-      "supportLevel": "list_only",
+      "url": "https://dixy.ru",
+      "skill": null,
+      "officialDomains": [
+        "dixy.ru",
+        "www.dixy.ru"
+      ],
       "capabilities": {
         "manualLists": true,
         "browserWorkflow": false,
-        "browserObservationImport": "unverified",
-        "connectedCatalog": "not_documented"
-      },
-      "evidence": "../../../../../README.md",
-      "notes": "Документированы списки панели; отдельный браузерный навык, wire ID и домены импорта здесь не подтверждены."
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
+      }
     },
     {
+      "id": "monetka",
       "name": "Монетка",
-      "id": null,
-      "officialDomains": [],
-      "supportLevel": "list_only",
+      "url": "https://www.monetka.ru",
+      "skill": null,
+      "officialDomains": [
+        "monetka.ru",
+        "www.monetka.ru"
+      ],
       "capabilities": {
         "manualLists": true,
         "browserWorkflow": false,
-        "browserObservationImport": "unverified",
-        "connectedCatalog": "not_documented"
-      },
-      "evidence": "../../../../../README.md",
-      "notes": "Документированы списки панели; отдельный браузерный навык, wire ID и домены импорта здесь не подтверждены."
+        "browserObservationImport": true,
+        "connectedCatalog": "not_documented",
+        "realCartLink": false,
+        "verifiedTransfer": false
+      }
+    },
+    {
+      "id": "bahetle",
+      "name": "Бахетле",
+      "url": "https://dostavka.bahetle.com/",
+      "skill": null,
+      "officialDomains": [
+        "dostavka.bahetle.com"
+      ],
+      "capabilities": {
+        "manualLists": true,
+        "browserWorkflow": false,
+        "browserObservationImport": false,
+        "connectedCatalog": "location_scoped_catalog",
+        "realCartLink": false,
+        "verifiedTransfer": false
+      }
     }
   ]
 }

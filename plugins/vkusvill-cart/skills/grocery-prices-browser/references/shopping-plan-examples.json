@@ -1,0 +1,181 @@
+[
+  {
+    "tool": "shopping_plan_update",
+    "arguments": {
+      "operation_id": "9e7bb609-30b5-4f4f-a4be-000000000001",
+      "workspace_id": "602af799-35c8-4475-b6dd-7f1279e5f26c",
+      "expected_revision": 0,
+      "store_ids": [
+        "5ka",
+        "magnit"
+      ],
+      "changes": [
+        {
+          "action": "upsert",
+          "item_id": "milk",
+          "name": "Молоко",
+          "quantity": 2,
+          "unit": "л"
+        },
+        {
+          "action": "upsert",
+          "item_id": "eggs",
+          "name": "Яйца",
+          "quantity": 10,
+          "unit": "шт"
+        },
+        {
+          "action": "upsert",
+          "item_id": "apples",
+          "name": "Яблоки",
+          "quantity": 1,
+          "unit": "кг"
+        }
+      ]
+    }
+  },
+  {
+    "tool": "shopping_research_update",
+    "arguments": {
+      "operation_id": "9e7bb609-30b5-4f4f-a4be-000000000002",
+      "workspace_id": "602af799-35c8-4475-b6dd-7f1279e5f26c",
+      "expected_revision": 1,
+      "action": "start",
+      "research_id": "f345b34e-ec58-4bd7-a741-67ed05f04231",
+      "attempt_id": "605b441c-bde7-429d-a3b7-4a5c59a0f0ca",
+      "item_ids": [
+        "milk",
+        "eggs",
+        "apples"
+      ],
+      "store_ids": [
+        "5ka",
+        "magnit"
+      ]
+    }
+  },
+  {
+    "tool": "shopping_research_update",
+    "arguments": {
+      "operation_id": "9e7bb609-30b5-4f4f-a4be-000000000003",
+      "workspace_id": "602af799-35c8-4475-b6dd-7f1279e5f26c",
+      "expected_revision": 2,
+      "action": "checking",
+      "research_id": "f345b34e-ec58-4bd7-a741-67ed05f04231",
+      "attempt_id": "605b441c-bde7-429d-a3b7-4a5c59a0f0ca",
+      "item_ids": [
+        "milk"
+      ],
+      "store_ids": [
+        "5ka",
+        "magnit"
+      ]
+    }
+  },
+  {
+    "tool": "prices_browser_show",
+    "arguments": {
+      "q": "Молоко",
+      "city": "Казань",
+      "correlation": {
+        "workspace_id": "602af799-35c8-4475-b6dd-7f1279e5f26c",
+        "research_id": "f345b34e-ec58-4bd7-a741-67ed05f04231",
+        "attempt_id": "605b441c-bde7-429d-a3b7-4a5c59a0f0ca",
+        "item_id": "milk",
+        "item_revision": 1,
+        "context_revision": 0
+      },
+      "products": [
+        {
+          "id": "synthetic-milk-900",
+          "scope": "Казань, учебная публичная точка",
+          "fulfillment": "pickup",
+          "checkedAt": "2026-10-29T07:00:00.000Z",
+          "url": "https://magnit.ru/",
+          "store": "magnit",
+          "name": "Учебное молоко 900 мл",
+          "price": 100,
+          "quantity": 0.9,
+          "unit": "л",
+          "condition": "Синтетический пример, не цена магазина",
+          "availability": "available",
+          "priceType": "regular",
+          "match": "exact",
+          "locationConfirmed": true,
+          "conditionsConfirmed": false,
+          "offerKind": "offer"
+        }
+      ],
+      "checks": [
+        {
+          "store": "5ka",
+          "scope": "Локация не подтверждена",
+          "fulfillment": "unknown",
+          "checkedAt": "2026-10-29T07:00:00.000Z",
+          "status": "login_required",
+          "message": "Синтетический пример: требуется вход пользователя",
+          "url": "https://5ka.ru/"
+        }
+      ]
+    }
+  },
+  {
+    "tool": "shopping_offer_select",
+    "arguments": {
+      "operation_id": "9e7bb609-30b5-4f4f-a4be-000000000004",
+      "workspace_id": "602af799-35c8-4475-b6dd-7f1279e5f26c",
+      "expected_revision": 4,
+      "item_id": "milk",
+      "item_revision": 1,
+      "store": "magnit",
+      "observation": {
+        "id": "synthetic-milk-900",
+        "scope": "Казань, учебная публичная точка",
+        "fulfillment": "pickup",
+        "checkedAt": "2026-10-29T07:00:00.000Z",
+        "url": "https://magnit.ru/"
+      }
+    }
+  },
+  {
+    "tool": "shopping_research_update",
+    "arguments": {
+      "operation_id": "9e7bb609-30b5-4f4f-a4be-000000000005",
+      "workspace_id": "602af799-35c8-4475-b6dd-7f1279e5f26c",
+      "expected_revision": 5,
+      "action": "resume",
+      "research_id": "f345b34e-ec58-4bd7-a741-67ed05f04231",
+      "attempt_id": "605b441c-bde7-429d-a3b7-4a5c59a0f0cb",
+      "item_ids": [
+        "milk"
+      ],
+      "store_ids": [
+        "5ka"
+      ]
+    }
+  },
+  {
+    "tool": "shopping_plan_update",
+    "arguments": {
+      "operation_id": "9e7bb609-30b5-4f4f-a4be-000000000006",
+      "workspace_id": "602af799-35c8-4475-b6dd-7f1279e5f26c",
+      "expected_revision": 6,
+      "changes": [
+        {
+          "action": "remove",
+          "item_id": "apples"
+        }
+      ]
+    }
+  },
+  {
+    "tool": "shopping_plan_update",
+    "arguments": {
+      "operation_id": "9e7bb609-30b5-4f4f-a4be-000000000007",
+      "workspace_id": "602af799-35c8-4475-b6dd-7f1279e5f26c",
+      "expected_revision": 7,
+      "store_ids": [],
+      "changes": []
+    }
+  }
+]
